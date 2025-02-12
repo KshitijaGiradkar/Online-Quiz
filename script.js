@@ -51,6 +51,7 @@ restart_quiz.onclick = ()=>{
     userScore = 0;
     widthValue = 0;
     n=1;
+    questions();
     showQuetions(que_count); //calling showQestions function
     queCounter(que_numb); //passing que_numb value to queCounter
     clearInterval(counter); //clear counter
@@ -89,7 +90,7 @@ next_btn.onclick = ()=>{
     }
 }
 
-    let n = 1;
+    let n = 1; //for numbering the questions during dispaly
 // getting questions and options from array
 function showQuetions(index){
     const que_text = document.querySelector(".que_text");
