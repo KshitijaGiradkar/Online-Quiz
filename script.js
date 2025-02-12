@@ -50,6 +50,7 @@ restart_quiz.onclick = ()=>{
     que_numb = 1;
     userScore = 0;
     widthValue = 0;
+    n=1;
     showQuetions(que_count); //calling showQestions function
     queCounter(que_numb); //passing que_numb value to queCounter
     clearInterval(counter); //clear counter
@@ -88,12 +89,15 @@ next_btn.onclick = ()=>{
     }
 }
 
+    let n = 1;
 // getting questions and options from array
 function showQuetions(index){
     const que_text = document.querySelector(".que_text");
 
     //creating a new span and div tag for question and option and passing the value using array index
-    let que_tag = '<span>'+ questions[index].numb + ". " + questions[index].question +'</span>';
+    // let que_tag = '<span>'+ questions[index].numb + ". " + questions[index].question +'</span>';
+    let que_tag = '<span>'+ n + ". " + questions[index].question +'</span>';
+    n = n+1;
     let option_tag = '<div class="option"><span>'+ questions[index].options[0] +'</span></div>'
     + '<div class="option"><span>'+ questions[index].options[1] +'</span></div>'
     + '<div class="option"><span>'+ questions[index].options[2] +'</span></div>'
@@ -214,7 +218,7 @@ function queCounter(index){
 continue_btn.onclick = ()=>{
     info_box.classList.remove("activeInfo");
     quiz_box.classList.add("activeQuiz");
-    questions = getRandomQuestions(); // Get random 4 questions
+    questions = getRandomQuestions(); // Get random 5 questions
     showQuetions(0);
     queCounter(1);
     startTimer(15);

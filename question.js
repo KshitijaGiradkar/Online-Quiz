@@ -54,7 +54,7 @@ let allQuestions = [
 
 ];
 
-function getRandomQuestions(count = 4) {
+function getRandomQuestions(count = 5) {
     let shuffled = allQuestions.sort(() => 0.52 - Math.random());
     return shuffled.slice(0, count);
 }
