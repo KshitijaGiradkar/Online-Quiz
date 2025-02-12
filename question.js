@@ -1,0 +1,62 @@
+let allQuestions = [
+    { numb: 1, question: "What is the capital of France?", answer: "Paris", options: ["Paris", "London", "Rome", "Berlin"] },
+    { numb: 2, question: "Who developed the theory of relativity?", answer: "Albert Einstein", options: ["Isaac Newton", "Albert Einstein", "Galileo Galilei", "Nikola Tesla"] },
+    { numb: 3, question: "What is the chemical symbol for gold?", answer: "Au", options: ["Ag", "Pb", "Au", "Fe"] },
+    { numb: 4, question: "Which planet is known as the Red Planet?", answer: "Mars", options: ["Venus", "Mars", "Jupiter", "Saturn"] },
+    { numb: 5, question: "What is the largest ocean on Earth?", answer: "Pacific Ocean", options: ["Atlantic Ocean", "Indian Ocean", "Pacific Ocean", "Arctic Ocean"] },
+    { numb: 6, question: "Who wrote 'Hamlet'?", answer: "William Shakespeare", options: ["Mark Twain", "William Shakespeare", "Jane Austen", "Charles Dickens"] },
+    { numb: 7, question: "What is the powerhouse of the cell?", answer: "Mitochondria", options: ["Nucleus", "Mitochondria", "Ribosome", "Chloroplast"] },
+    { numb: 8, question: "What is the speed of light in a vacuum?", answer: "299,792,458 m/s", options: ["300,000,000 m/s", "299,792,458 m/s", "280,000,000 m/s", "320,000,000 m/s"] },
+    { numb: 9, question: "What is the square root of 144?", answer: "12", options: ["10", "11", "12", "13"] },
+    { numb: 10, question: "Which gas do plants primarily use for photosynthesis?", answer: "Carbon Dioxide", options: ["Oxygen", "Nitrogen", "Carbon Dioxide", "Hydrogen"] },
+    { numb: 11, question: "If a triangle has angles 90°, 30°, and 60°, what type is it?", answer: "Right-angled", options: ["Scalene", "Right-angled", "Isosceles", "Acute"] },
+    { numb: 12, question: "What is the value of π (pi) up to two decimal places?", answer: "3.14", options: ["3.12", "3.14", "3.16", "3.18"] },
+    { numb: 13, question: "Who is known as the father of computers?", answer: "Charles Babbage", options: ["Alan Turing", "Charles Babbage", "Bill Gates", "Steve Jobs"] },
+    { numb: 14, question: "What does CPU stand for?", answer: "Central Processing Unit", options: ["Central Programming Unit", "Central Processing Unit", "Computer Personal Unit", "Central Print Unit"] },
+    { numb: 15, question: "Which programming language is known for web development?", answer: "JavaScript", options: ["Java", "C++", "Python", "JavaScript"] },
+    { numb: 16, question: "What does HTTP stand for?", answer: "HyperText Transfer Protocol", options: ["HyperText Transfer Protocol", "Hyperlink Text Protocol", "High Transfer Text Protocol", "Hyper Transfer Type"] },
+    { numb: 17, question: "Who was the first President of the USA?", answer: "George Washington", options: ["Abraham Lincoln", "George Washington", "Thomas Jefferson", "John Adams"] },
+    { numb: 18, question: "Which year did World War II end?", answer: "1945", options: ["1918", "1939", "1945", "1955"] },
+    { numb: 19, question: "Who discovered America?", answer: "Christopher Columbus", options: ["James Cook", "Christopher Columbus", "Marco Polo", "Vasco da Gama"] },
+    { numb: 20, question: "What was the ancient name of Iraq?", answer: "Mesopotamia", options: ["Babylonia", "Mesopotamia", "Persia", "Ottoman Empire"] },
+    { numb: 21, question: "How many players are there in a standard soccer team?", answer: "11", options: ["9", "10", "11", "12"] },
+    { numb: 22, question: "Which country won the FIFA World Cup in 2018?", answer: "France", options: ["Brazil", "Germany", "France", "Argentina"] },
+    { numb: 23, question: "How many rings are there in the Olympic symbol?", answer: "5", options: ["3", "4", "5", "6"] },
+    { numb: 24, question: "Which sport is Serena Williams known for?", answer: "Tennis", options: ["Badminton", "Tennis", "Squash", "Table Tennis"] },
+    { numb: 25, question: "Which is the smallest continent?", answer: "Australia", options: ["Europe", "Australia", "Antarctica", "South America"] },
+    { numb: 26, question: "Which desert is the largest in the world?", answer: "Sahara", options: ["Gobi", "Sahara", "Kalahari", "Arabian"] },
+    { numb: 27, question: "Which is the tallest mountain in the world?", answer: "Mount Everest", options: ["Mount Kilimanjaro", "Mount Everest", "Mount K2", "Mount McKinley"] },
+    { numb: 28, question: "Which ocean is the largest?", answer: "Pacific", options: ["Atlantic", "Indian", "Pacific", "Arctic"] },
+    { numb: 29, question: "Which country is famous for the Great Wall?", answer: "China", options: ["India", "China", "Japan", "Korea"] },
+    { numb: 30, question: "What is the national flower of India?", answer: "Lotus", options: ["Rose", "Tulip", "Lotus", "Jasmine"] },
+    { numb: 31, question: "Which bird is known as the symbol of peace?", answer: "Dove", options: ["Eagle", "Parrot", "Dove", "Peacock"] },
+    { numb: 32, question: "What is the capital of Canada?", answer: "Ottawa", options: ["Toronto", "Ottawa", "Montreal", "Vancouver"] }, 
+    { numb: 33, question: "Which part of the human body produces insulin?", answer: "Pancreas", options: ["Liver", "Pancreas", "Kidney", "Stomach"] },
+    { numb: 34, question: "What is the hardest natural substance on Earth?", answer: "Diamond", options: ["Gold", "Diamond", "Iron", "Quartz"] },
+    { numb: 35, question: "What is the most abundant gas in Earth’s atmosphere?", answer: "Nitrogen", options: ["Oxygen", "Carbon Dioxide", "Nitrogen", "Hydrogen"] },
+    { numb: 36, question: "What vitamin do we get from sunlight?", answer: "Vitamin D", options: ["Vitamin A", "Vitamin B", "Vitamin C", "Vitamin D"] }, 
+    { numb: 37, question: "What is the perimeter of a square with side 5 cm?", answer: "20 cm", options: ["10 cm", "20 cm", "25 cm", "30 cm"] },
+    { numb: 38, question: "What is 15% of 200?", answer: "30", options: ["20", "25", "30", "35"] },
+    { numb: 39, question: "How many sides does a heptagon have?", answer: "7", options: ["5", "6", "7", "8"] },
+    { numb: 40, question: "If 2x + 5 = 15, what is x?", answer: "5", options: ["3", "4", "5", "6"] },
+    { numb: 41, question: "Who invented the telephone?", answer: "Alexander Graham Bell", options: ["Thomas Edison", "Nikola Tesla", "Alexander Graham Bell", "Albert Einstein"] },
+    { numb: 42, question: "What does RAM stand for?", answer: "Random Access Memory", options: ["Read-Only Memory", "Random Access Memory", "Remote Access Module", "Real Application Management"] },
+    { numb: 43, question: "Which company developed the Windows operating system?", answer: "Microsoft", options: ["Apple", "Google", "Microsoft", "IBM"] },
+    { numb: 44, question: "What is the full form of URL?", answer: "Uniform Resource Locator", options: ["Unified Response Link", "Universal Reference Locator", "Uniform Resource Locator", "Unique Record Link"] },  
+    { numb: 45, question: "Who was the first man to walk on the moon?", answer: "Neil Armstrong", options: ["Buzz Aldrin", "Yuri Gagarin", "Neil Armstrong", "Michael Collins"] },
+    { numb: 46, question: "Which empire built the Taj Mahal?", answer: "Mughal Empire", options: ["British Empire", "Maurya Empire", "Mughal Empire", "Gupta Empire"] },
+    { numb: 47, question: "Who was the founder of Buddhism?", answer: "Gautama Buddha", options: ["Mahavira", "Gautama Buddha", "Ashoka", "Chanakya"] },
+    { numb: 48, question: "When did India gain independence?", answer: "1947", options: ["1942", "1945", "1947", "1950"] },
+    { numb: 49, question: "Which country has won the most Cricket World Cups?", answer: "Australia", options: ["India", "Australia", "England", "West Indies"] },
+    { numb: 50, question: "What is the national sport of Canada?", answer: "Ice Hockey", options: ["Football", "Cricket", "Ice Hockey", "Basketball"] },
+    { numb: 51, question: "Which player has won the most Grand Slam titles in tennis?", answer: "Novak Djokovic", options: ["Roger Federer", "Rafael Nadal", "Novak Djokovic", "Serena Williams"] },
+    { numb: 52, question: "How many players are there in a standard basketball team?", answer: "5", options: ["5", "6", "7", "8"] }
+
+];
+
+function getRandomQuestions(count = 4) {
+    let shuffled = allQuestions.sort(() => 0.52 - Math.random());
+    return shuffled.slice(0, count);
+}
+
+let questions = getRandomQuestions();
